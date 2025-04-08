@@ -29,3 +29,6 @@ def send():
 @app.route("/get", methods=["GET"])
 def get():
     return jsonify(message)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Render gibt hier den Port vor
+    app.run(host="0.0.0.0", port=port)
